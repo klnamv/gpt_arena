@@ -1,0 +1,80 @@
+@import '../variables/Variables.scss';
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient($background-gradient-start, $background-gradient-end);
+    height: 90vh;
+
+    header {
+        font-family: $font;
+        font-weight: $titlefont;
+        font-size: 2.5rem;
+        color: $white;
+        margin-bottom: 1rem;
+    }
+
+    .gpt-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        .container {
+            width: 40vw;
+            height: 60vh;
+            background: $white;
+            padding: 2rem;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-family: $font;
+            font-weight: $titlefont;
+            font-size: 20px;
+            color: $pink;
+        }
+
+        p{
+            font-family: $font;
+            font-weight: $textfont;
+            font-size: 14px;
+        }
+    }
+
+    .message-chat-gpt {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        border: 1px solid black;
+        width: 30vw;
+        border-radius: 20px;
+        padding-right: 20px; 
+
+        input {
+            flex-grow: 1;
+            border: none;
+            outline: none;
+            padding: 20px;
+            font-size: 16px;
+            background: transparent;
+            
+            &::placeholder {
+                color: rgba(0, 0, 0, 0.5);
+              }
+        }
+
+        .send {
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
