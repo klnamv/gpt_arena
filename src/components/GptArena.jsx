@@ -42,38 +42,6 @@ const GptArena = () => {
   useDisplayOutput(outputGpt3, setDisplayedOutput3);
   useDisplayOutput(outputGpt4, setDisplayedOutput4);
 
-  // useEffect(() => {
-  //   if (outputGpt3 !== '') {
-  //     const words = outputGpt3.split(' ');
-  //     if (wordIndex < words.length) {
-  //       const newDisplay = words.slice(0, wordIndex + 1).join(' ');
-  //       setDisplayedOutput3(newDisplay);
-
-  //       const timeoutId = setTimeout(() => {
-  //         setWordIndex(wordIndex + 1);
-  //       }, 100);
-
-  //       return () => clearTimeout(timeoutId);
-  //     }
-  //   }
-  // }, [outputGpt3, wordIndex]);
-
-  // useEffect(() => {
-  //   if (outputGpt4 !== '') {
-  //     const words = outputGpt4.split(' ');
-  //     if (wordIndex < words.length) {
-  //       const newDisplay = words.slice(0, wordIndex + 1).join(' ');
-  //       setDisplayedOutput4(newDisplay);
-
-  //       const timeoutId = setTimeout(() => {
-  //         setWordIndex(wordIndex + 1);
-  //       }, 100);
-
-  //       return () => clearTimeout(timeoutId);
-  //     }
-  //   }
-  // }, [outputGpt4, wordIndex]);
-  
   const handleInputChange = e => {
     setInput(e.target.value);
   }
