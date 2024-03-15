@@ -36,15 +36,19 @@
   font-size: 20px;
   color: #E43F6F;
 }
-.main-page .gpt-container markdown-content {
+.main-page .gpt-container .markdown-content {
   font-family: "Montserrat", Courier, monospace;
   font-weight: 300;
   text-align: start;
   padding: 5px 20px;
   font-size: 16px;
-  line-height: 1.6;
-  overflow-y: auto;
-  max-height: 500px;
+  line-height: 1.15;
+  overflow: auto;
+  height: 100%;
+}
+.main-page .gpt-container .markdown-content code {
+  color: #E43F6F;
+  background: #FFCF56;
 }
 .main-page .message-chat-gpt {
   margin-top: 20px;

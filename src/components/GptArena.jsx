@@ -67,35 +67,40 @@ const GptArena = () => {
     setInput(e.target.value);
   }
 
-  const handleSubmitGpt3 = async () => {
+  const handleSubmitGpt = async (model) => {
     try {
       const completion = await openai.chat.completions.create({
         messages: [{ role: "user", content: input }],
         model: "gpt-3.5-turbo",
       });
-      setOutputGpt3(completion.choices[0].message.content);
+      if (model === "gpt-3.5-turbo") {
+        setOutputGpt3(completion.choices[0].message.content);
+      } else if (model === "gpt-3.5-turbo-1106") {
+        setOutputGpt4(completion.choices[0].message.content);
+      }
       setWordIndex(0);
     } catch (error) {
       console.error("Error fetching from OpenAI:", error);
     }
   }
 
-  const handleSubmitGpt4 = async () => {
-    try {
-      const completion = await openai.chat.completions.create({
-        messages: [{ role: "user", content: input }],
-        model: "gpt-3.5-turbo-1106",
-      });
-      setOutputGpt4(completion.choices[0].message.content);
-      setWordIndex(0);
-    } catch (error) {
-      console.error("Error fetching from OpenAI:", error);
-    }
-  }
+  // const handleSubmitGpt4 = async () => {
+  //   try {
+  //     const completion = await openai.chat.completions.create({
+  //       messages: [{ role: "user", content: input }],
+  //       model: "gpt-3.5-turbo-1106",
+  //     });
+  //     setOutputGpt4(completion.choices[0].message.content);
+  //     setWordIndex(0);
+  //   } catch (error) {
+  //     console.error("Error fetching from OpenAI:", error);
+  //   }
+  // }
 
   const handleCombinedSubmit = () => {
-    handleSubmitGpt3();
-    handleSubmitGpt4();
+    handleSubmitGpt("gpt-3.5-turbo");
+    handleSubmitGpt("gpt-3.5-turbo-1106")
+    // handleSubmitGpt4();
   }
 
   const handleKeyPress = (e) => {
@@ -111,11 +116,15 @@ const GptArena = () => {
       <div className='gpt-container'>
         <div className='container'>
           <h2>GPT 3.5 Turbo</h2>
-          <ReactMarkdown className="markdown-content">{displayedOutput3}</ReactMarkdown>
+          <div className="markdown-content">
+            <ReactMarkdown>{displayedOutput3}</ReactMarkdown>
+          </div>
         </div>
         <div className='container'>
           <h2>GPT 3</h2>
-          <ReactMarkdown className="markdown-content">{displayedOutput4}</ReactMarkdown>
+          <div className="markdown-content">
+            <ReactMarkdown>{displayedOutput4}</ReactMarkdown>
+          </div>
         </div>
     </div>
       <div>
