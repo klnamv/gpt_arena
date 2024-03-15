@@ -8,20 +8,29 @@ import button from '../assets/button.svg';
 const api_key = process.env.REACT_APP_OPENAI_API_KEY;
 const openai = new OpenAI({apiKey: api_key, dangerouslyAllowBrowser: true});
 
-// async function main() {
-//   const completion = await openai.chat.completions.create({
-//     messages: [{ role: "system", content: "You are a helpful assistant." }],
-//     model: "gpt-3.5-turbo",
-//   });
+function useDisplayOutput(output, setDisplayedOutput) {
+  const [wordIndex, setWordIndex] = useState(0);
 
+  useEffect(() => {
+    if (output !== '') {
+      const words = output.split(' ');
+      if (wordIndex < words.length) {
+        const newDisplay = words.slice(0, wordIndex + 1).join(' ');
+        setDisplayedOutput(newDisplay);
 
+        const timeoutId = setTimeout(() => {
+          setWordIndex(wordIndex + 1);
+        }, 100);
 
-//   return(completion.choices[0].message.content);
-// }
+        return () => clearTimeout(timeoutId);
+      }
+    }
+  }, [output, wordIndex, setDisplayedOutput]);
 
-// main();
-// let s = await main()
-// console.log(s);
+  useEffect(() => {
+    setWordIndex(0);
+  }, [output]);
+}
 
 const GptArena = () => {
   const [input, setInput] = useState('');
@@ -29,40 +38,42 @@ const GptArena = () => {
   const [outputGpt4, setOutputGpt4] = useState('');
   const [displayedOutput3, setDisplayedOutput3] = useState('');
   const [displayedOutput4, setDisplayedOutput4] = useState('');
-  const [wordIndex, setWordIndex] = useState(0);
+
+  useDisplayOutput(outputGpt3, setDisplayedOutput3);
+  useDisplayOutput(outputGpt4, setDisplayedOutput4);
+
+  // useEffect(() => {
+  //   if (outputGpt3 !== '') {
+  //     const words = outputGpt3.split(' ');
+  //     if (wordIndex < words.length) {
+  //       const newDisplay = words.slice(0, wordIndex + 1).join(' ');
+  //       setDisplayedOutput3(newDisplay);
+
+  //       const timeoutId = setTimeout(() => {
+  //         setWordIndex(wordIndex + 1);
+  //       }, 100);
+
+  //       return () => clearTimeout(timeoutId);
+  //     }
+  //   }
+  // }, [outputGpt3, wordIndex]);
+
+  // useEffect(() => {
+  //   if (outputGpt4 !== '') {
+  //     const words = outputGpt4.split(' ');
+  //     if (wordIndex < words.length) {
+  //       const newDisplay = words.slice(0, wordIndex + 1).join(' ');
+  //       setDisplayedOutput4(newDisplay);
+
+  //       const timeoutId = setTimeout(() => {
+  //         setWordIndex(wordIndex + 1);
+  //       }, 100);
+
+  //       return () => clearTimeout(timeoutId);
+  //     }
+  //   }
+  // }, [outputGpt4, wordIndex]);
   
-  useEffect(() => {
-    if (outputGpt3 !== '') {
-      const words = outputGpt3.split(' ');
-      if (wordIndex < words.length) {
-        const newDisplay = words.slice(0, wordIndex + 1).join(' ');
-        setDisplayedOutput3(newDisplay);
-
-        const timeoutId = setTimeout(() => {
-          setWordIndex(wordIndex + 1);
-        }, 100);
-
-        return () => clearTimeout(timeoutId);
-      }
-    }
-  }, [outputGpt3, wordIndex]);
-
-  useEffect(() => {
-    if (outputGpt4 !== '') {
-      const words = outputGpt4.split(' ');
-      if (wordIndex < words.length) {
-        const newDisplay = words.slice(0, wordIndex + 1).join(' ');
-        setDisplayedOutput4(newDisplay);
-
-        const timeoutId = setTimeout(() => {
-          setWordIndex(wordIndex + 1);
-        }, 100);
-
-        return () => clearTimeout(timeoutId);
-      }
-    }
-  }, [outputGpt4, wordIndex]);
-
   const handleInputChange = e => {
     setInput(e.target.value);
   }
@@ -78,29 +89,14 @@ const GptArena = () => {
       } else if (model === "gpt-3.5-turbo-1106") {
         setOutputGpt4(completion.choices[0].message.content);
       }
-      setWordIndex(0);
     } catch (error) {
       console.error("Error fetching from OpenAI:", error);
     }
   }
 
-  // const handleSubmitGpt4 = async () => {
-  //   try {
-  //     const completion = await openai.chat.completions.create({
-  //       messages: [{ role: "user", content: input }],
-  //       model: "gpt-3.5-turbo-1106",
-  //     });
-  //     setOutputGpt4(completion.choices[0].message.content);
-  //     setWordIndex(0);
-  //   } catch (error) {
-  //     console.error("Error fetching from OpenAI:", error);
-  //   }
-  // }
-
   const handleCombinedSubmit = () => {
     handleSubmitGpt("gpt-3.5-turbo");
     handleSubmitGpt("gpt-3.5-turbo-1106")
-    // handleSubmitGpt4();
   }
 
   const handleKeyPress = (e) => {
