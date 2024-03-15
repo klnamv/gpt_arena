@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactMarkdown from 'react-markdown';
 import OpenAI from "openai";
 import '../styles/GptArena.css';
 
@@ -97,22 +98,29 @@ const GptArena = () => {
     handleSubmitGpt4();
   }
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      handleCombinedSubmit();
+    }
+  };
+
   return (
     <div className='main-page'>
       <header>GPT Arena</header>
       <div className='gpt-container'>
         <div className='container'>
           <h2>GPT 3.5 Turbo</h2>
-          <p>{displayedOutput3}</p>
+          <ReactMarkdown className="markdown-content">{displayedOutput3}</ReactMarkdown>
         </div>
         <div className='container'>
-          <h2>GPT 4</h2>
-          <p>{displayedOutput4}</p>
+          <h2>GPT 3</h2>
+          <ReactMarkdown className="markdown-content">{displayedOutput4}</ReactMarkdown>
         </div>
     </div>
       <div>
         <div className='message-chat-gpt'>
-          <input type='text' value={input} onChange={handleInputChange} placeholder='Message ChatGPT...' />
+          <input type='text' value={input} onChange={handleInputChange} onKeyDown={handleKeyPress} placeholder='Message ChatGPT...' />
           <img src={button} onClick={handleCombinedSubmit} className='send' alt='send'/>
         </div>
       </div>

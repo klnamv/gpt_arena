@@ -6,14 +6,14 @@
     align-items: center;
     justify-content: center;
     background: linear-gradient($background-gradient-start, $background-gradient-end);
-    height: 90vh;
+    height: 93vh;
 
     header {
         font-family: $font;
         font-weight: $titlefont;
         font-size: 2.5rem;
         color: $white;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     .gpt-container {
@@ -22,10 +22,10 @@
         gap: 1rem;
 
         .container {
-            width: 40vw;
-            height: 60vh;
+            width: 30vw;
+            height: 65vh;
             background: $white;
-            padding: 2rem;
+            padding: 20px;
             border-radius: 10px;
             display: flex;
             flex-direction: column;
@@ -40,11 +40,15 @@
             color: $pink;
         }
 
-        p{
+        markdown-content{
             font-family: $font;
             font-weight: $textfont;
-            padding: 25px 50px;
+            text-align: start;
+            padding: 5px 20px;
             font-size: 16px;
+            line-height: 1.6;
+            overflow-y: auto;
+            max-height: 500px;
         }
     }
 
@@ -54,8 +58,9 @@
         justify-content: center;
         border: 1px solid black;
         width: 30vw;
-        border-radius: 20px;
-        padding-right: 20px; 
+        height: 5vh;
+        border-radius: 10px;
+        padding-right: 6px; 
 
         input {
             flex-grow: 1;
@@ -72,6 +77,7 @@
 
         .send {
             cursor: pointer;
+            width: 2vw;
 
             &:hover {
                 opacity: 0.8;

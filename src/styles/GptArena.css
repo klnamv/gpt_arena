@@ -5,14 +5,14 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(#E43F6F, #FFCF56);
-  height: 90vh;
+  height: 93vh;
 }
 .main-page header {
   font-family: "Montserrat", Courier, monospace;
   font-weight: 600;
   font-size: 2.5rem;
   color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .main-page .gpt-container {
   display: flex;
@@ -20,10 +20,10 @@
   gap: 1rem;
 }
 .main-page .gpt-container .container {
-  width: 40vw;
-  height: 60vh;
+  width: 30vw;
+  height: 65vh;
   background: white;
-  padding: 2rem;
+  padding: 20px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -36,10 +36,15 @@
   font-size: 20px;
   color: #E43F6F;
 }
-.main-page .gpt-container p {
+.main-page .gpt-container markdown-content {
   font-family: "Montserrat", Courier, monospace;
   font-weight: 300;
-  font-size: 14px;
+  text-align: start;
+  padding: 5px 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-y: auto;
+  max-height: 500px;
 }
 .main-page .message-chat-gpt {
   margin-top: 20px;
@@ -47,8 +52,9 @@
   justify-content: center;
   border: 1px solid black;
   width: 30vw;
-  border-radius: 20px;
-  padding-right: 20px;
+  height: 5vh;
+  border-radius: 10px;
+  padding-right: 6px;
 }
 .main-page .message-chat-gpt input {
   flex-grow: 1;
@@ -66,6 +72,7 @@
 }
 .main-page .message-chat-gpt .send {
   cursor: pointer;
+  width: 2vw;
 }
 .main-page .message-chat-gpt .send:hover {
   opacity: 0.8;
