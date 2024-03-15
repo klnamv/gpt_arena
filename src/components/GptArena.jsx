@@ -50,7 +50,7 @@ const GptArena = () => {
     try {
       const completion = await openai.chat.completions.create({
         messages: [{ role: "user", content: input }],
-        model: "gpt-3.5-turbo",
+        model: model,
       });
       if (model === "gpt-3.5-turbo") {
         setOutputGpt3(completion.choices[0].message.content);
