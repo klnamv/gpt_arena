@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import OpenAI from "openai";
 import '../styles/GptArena.css';
@@ -8,39 +8,9 @@ import button from '../assets/button.svg';
 const api_key = process.env.REACT_APP_OPENAI_API_KEY;
 const openai = new OpenAI({apiKey: api_key, dangerouslyAllowBrowser: true});
 
-function useDisplayOutput(output, setDisplayedOutput) {
-  const [wordIndex, setWordIndex] = useState(0);
-
-  useEffect(() => {
-    if (output !== '') {
-      const words = output.split(' ');
-      if (wordIndex < words.length) {
-        const newDisplay = words.slice(0, wordIndex + 1).join(' ');
-        setDisplayedOutput(newDisplay);
-
-        const timeoutId = setTimeout(() => {
-          setWordIndex(wordIndex + 1);
-        }, 100);
-
-        return () => clearTimeout(timeoutId);
-      }
-    }
-  }, [output, wordIndex, setDisplayedOutput]);
-
-  useEffect(() => {
-    setWordIndex(0);
-  }, [output]);
-}
-
 const GptArena = () => {
   const [input, setInput] = useState('');
-  const [outputGpt3, setOutputGpt3] = useState('');
-  const [outputGpt4, setOutputGpt4] = useState('');
-  const [displayedOutput3, setDisplayedOutput3] = useState('');
-  const [displayedOutput4, setDisplayedOutput4] = useState('');
-
-  useDisplayOutput(outputGpt3, setDisplayedOutput3);
-  useDisplayOutput(outputGpt4, setDisplayedOutput4);
+  const [outputGpt, setOutputGpt] = useState({model1: '', model2: ''})
 
   const handleInputChange = e => {
     setInput(e.target.value);
@@ -51,11 +21,17 @@ const GptArena = () => {
       const completion = await openai.chat.completions.create({
         messages: [{ role: "user", content: input }],
         model: model,
+        stream: true,
       });
-      if (model === "gpt-3.5-turbo") {
-        setOutputGpt3(completion.choices[0].message.content);
-      } else if (model === "gpt-3.5-turbo-1106") {
-        setOutputGpt4(completion.choices[0].message.content);
+      for await (const chunk of completion) {
+        let content = chunk.choices[0]?.delta?.content
+        if (content === undefined) {
+          break;
+        }
+        setOutputGpt(prevOutput => ({
+          ...prevOutput,
+          [model] : (prevOutput[model] || '') + content
+        }));
       }
     } catch (error) {
       console.error("Error fetching from OpenAI:", error);
@@ -81,13 +57,13 @@ const GptArena = () => {
         <div className='container'>
           <h2>GPT 3.5 Turbo</h2>
           <div className="markdown-content">
-            <ReactMarkdown>{displayedOutput3}</ReactMarkdown>
+            <ReactMarkdown>{outputGpt.model2.content}</ReactMarkdown>
           </div>
         </div>
         <div className='container'>
           <h2>GPT 3</h2>
           <div className="markdown-content">
-            <ReactMarkdown>{displayedOutput4}</ReactMarkdown>
+            <ReactMarkdown>{outputGpt.model2.content}</ReactMarkdown>
           </div>
         </div>
     </div>
