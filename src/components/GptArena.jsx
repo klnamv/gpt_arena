@@ -8,23 +8,30 @@ import button from '../assets/button.svg';
 const api_key = process.env.REACT_APP_OPENAI_API_KEY;
 const openai = new OpenAI({apiKey: api_key, dangerouslyAllowBrowser: true});
 
+const modelMapping = {
+  model1: "gpt-3.5-turbo",
+  model2: "gpt-3.5-turbo-0125" 
+};
+
 const GptArena = () => {
   const [input, setInput] = useState('');
-  const [outputGpt, setOutputGpt] = useState({model1: '', model2: ''})
+  const [outputGpt, setOutputGpt] = useState({model1: '' , model2: ''})
 
   const handleInputChange = e => {
     setInput(e.target.value);
   }
 
   const handleSubmitGpt = async (model) => {
+    const actualModelId = modelMapping[model];
     try {
       const completion = await openai.chat.completions.create({
         messages: [{ role: "user", content: input }],
-        model: model,
+        model: actualModelId,
         stream: true,
       });
       for await (const chunk of completion) {
-        let content = chunk.choices[0]?.delta?.content
+        let content = chunk.choices[0]?.delta?.content;
+        console.log(content);
         if (content === undefined) {
           break;
         }
@@ -39,8 +46,9 @@ const GptArena = () => {
   }
 
   const handleCombinedSubmit = () => {
-    handleSubmitGpt("gpt-3.5-turbo");
-    handleSubmitGpt("gpt-3.5-turbo-1106")
+    setOutputGpt({model1: '', model2: ''});
+    handleSubmitGpt("model1");
+    handleSubmitGpt("model2");
   }
 
   const handleKeyPress = (e) => {
@@ -57,13 +65,29 @@ const GptArena = () => {
         <div className='container'>
           <h2>GPT 3.5 Turbo</h2>
           <div className="markdown-content">
-            <ReactMarkdown>{outputGpt.model2.content}</ReactMarkdown>
+            {
+              outputGpt.model1 === null ? (
+                <p>No request made yet</p>
+              ) : outputGpt.model1 === '' ? (
+                <p>Loading...</p>
+              ) : (
+                <ReactMarkdown>{outputGpt.model1}</ReactMarkdown>
+              )
+            }
           </div>
         </div>
         <div className='container'>
           <h2>GPT 3</h2>
           <div className="markdown-content">
-            <ReactMarkdown>{outputGpt.model2.content}</ReactMarkdown>
+            {
+              outputGpt.model2 === null ? (
+                <p>No request made yet</p>
+              ) : outputGpt.model2 === '' ? (
+                <p>Loading...</p>
+              ) : (
+                <ReactMarkdown>{outputGpt.model2}</ReactMarkdown>
+              )
+            }
           </div>
         </div>
     </div>
