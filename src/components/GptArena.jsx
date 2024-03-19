@@ -65,7 +65,8 @@ const GptArena = () => {
         <div className='container'>
           <h2>GPT 3.5 Turbo</h2>
           <div className="markdown-content">
-            {
+            <ReactMarkdown>{outputGpt.model1}</ReactMarkdown>
+            {/* {
               outputGpt.model1 === null ? (
                 <p>No request made yet</p>
               ) : outputGpt.model1 === '' ? (
@@ -73,13 +74,14 @@ const GptArena = () => {
               ) : (
                 <ReactMarkdown>{outputGpt.model1}</ReactMarkdown>
               )
-            }
+            } */}
           </div>
         </div>
         <div className='container'>
-          <h2>GPT 3</h2>
+          <h2>GPT 3.5 Turbo 0125</h2>
           <div className="markdown-content">
-            {
+            <ReactMarkdown>{outputGpt.model2}</ReactMarkdown>
+            {/* {
               outputGpt.model2 === null ? (
                 <p>No request made yet</p>
               ) : outputGpt.model2 === '' ? (
@@ -87,7 +89,7 @@ const GptArena = () => {
               ) : (
                 <ReactMarkdown>{outputGpt.model2}</ReactMarkdown>
               )
-            }
+            } */}
           </div>
         </div>
     </div>
