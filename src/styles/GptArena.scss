@@ -49,10 +49,12 @@
             line-height: 1.15;
             overflow: auto;
             height: 100%;
+            width: 100%;
         }
         .markdown-content code {
+            font-size: small;
             color: $pink;
-            background: $yellow;
+            background: $gray;
           }
     }
 
@@ -61,7 +63,7 @@
         display: flex;
         justify-content: center;
         border: 1px solid black;
-        width: 30vw;
+        width: 45vw;
         height: 5vh;
         border-radius: 10px;
         padding-right: 6px; 

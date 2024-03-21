@@ -1,13 +1,15 @@
 import React from "react";
 import '../styles/MainPage.css';
 
+import arrow from '../assets/arrow.svg';
+
 const MainPage = ({onStart}) => {
     return (
         <div className="mainPage">
             <div className="container">
                 <h1>Welcome to the GPT arena</h1>
                 <div className="navigation">
-                    <button onClick={onStart}>Try It </button>
+                    <button onClick={onStart}>Try It <img src={arrow} alt="arrow" className="arrow" /></button>
                     <a href='https://platform.openai.com/docs/api-reference'>Learn More</a>
                 </div>
             </div>

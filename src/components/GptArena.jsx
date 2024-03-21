@@ -10,7 +10,7 @@ const openai = new OpenAI({apiKey: api_key, dangerouslyAllowBrowser: true});
 
 const modelMapping = {
   model1: "gpt-3.5-turbo",
-  model2: "gpt-3.5-turbo-0125" 
+  model2: "gpt-4-1106-preview" 
 };
 
 const GptArena = () => {
@@ -66,30 +66,12 @@ const GptArena = () => {
           <h2>GPT 3.5 Turbo</h2>
           <div className="markdown-content">
             <ReactMarkdown>{outputGpt.model1}</ReactMarkdown>
-            {/* {
-              outputGpt.model1 === null ? (
-                <p>No request made yet</p>
-              ) : outputGpt.model1 === '' ? (
-                <p>Loading...</p>
-              ) : (
-                <ReactMarkdown>{outputGpt.model1}</ReactMarkdown>
-              )
-            } */}
           </div>
         </div>
         <div className='container'>
-          <h2>GPT 3.5 Turbo 0125</h2>
+          <h2>GPT 4</h2>
           <div className="markdown-content">
             <ReactMarkdown>{outputGpt.model2}</ReactMarkdown>
-            {/* {
-              outputGpt.model2 === null ? (
-                <p>No request made yet</p>
-              ) : outputGpt.model2 === '' ? (
-                <p>Loading...</p>
-              ) : (
-                <ReactMarkdown>{outputGpt.model2}</ReactMarkdown>
-              )
-            } */}
           </div>
         </div>
     </div>
