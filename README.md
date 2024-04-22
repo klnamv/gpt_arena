@@ -18,7 +18,7 @@ Users input data that is asynchronously sent to the selected GPT model via the O
 - Add a personal account (username, password, API key);
 - Save user info, sessions in DataBase (MongoDB or Postgres);
 - Add the ability to select models for comparison (drop-down list);
-- Adapt the web application for mobile devices;
+- Adapt the web application for mobile devices.
 
 # Known Problems 🐛
 - The web application is not adapted for phones and tablets.
