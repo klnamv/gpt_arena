@@ -65,4 +65,4 @@ Feel free to submit feature requests through GitHub Issues. Describe what you wo
 
 Don't hesitate to create an issue in the repository or reach out directly if you have any questions about contributing.
 
-Thank you for your contributions, and let’s make GPT arena even better together!
+**Thank you for your contributions, and let’s make GPT arena even better together ✨**
