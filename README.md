@@ -14,6 +14,21 @@ In the web application you can compare models: `gpt-3.5-turbo` and `gpt-4-1106-p
 # How It Works?
 Users input data that is asynchronously sent to the selected GPT model via the OpenAI API, using a streaming to output the generated text - the model's response, and ReactMarkdown to display the output, providing a full-fledged representation of the message.
 
+# OpenAI API Key 🔐
+To interact with the GPT models, an API key from OpenAI is required. This key enables your application to authenticate requests to OpenAI's services, ensuring that usage is secure and measured.
+
+**Acquiring an API Key**
+1. Create an account at OpenAI.
+2. Navigate to the API section and generate a new API key.
+3. Once you have your key, you will use it in your environment file to authenticate API requests from your application.
+
+**Setting Up Your API Key**
+
+In the root of your project:
+1. Create a `.env` file.
+2. Add the following line: `REACT_APP_OPENAI_API_KEY='your-api-key-here'`.
+3. This will allow your application to authenticate its requests to OpenAI.
+
 # How Can It Be Improved?
 - Add a personal account (username, password, API key);
 - Save user info, sessions in DataBase (MongoDB or Postgres);
@@ -28,7 +43,7 @@ To run the project in your local environment, follow these steps:
 
 1. Clone the repository to your local machine.
 2. Run <code>npm install</code> or <code>yarn</code> in the project directory to install the required dependencies.
-3. Create `env` file, inside write <code>REACT_APP_OPENAI_API_KEY='your-api-key-here'</code>
+3. Create `.env` file, inside write <code>REACT_APP_OPENAI_API_KEY='your-api-key-here'</code>
 4. Run <code>npm run start</code> or <code>yarn start</code> to get the project started.
 5. Open http://localhost:3000 (or the address shown in your console) in your web browser to view the app.
 
