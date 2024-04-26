@@ -1,55 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 .mainPage {
-  height: 87vh;
-  padding-top: 50px;
-  padding-left: 120px;
-  display: flex;
-  justify-content: flex-start;
-  justify-content: space-between;
+  padding: 6%; /* Adjust padding for smaller screens */
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout for mobile */
   align-items: center;
   background: linear-gradient(#E43F6F, #FFCF56);
 }
+
 .mainPage .container {
   font-family: "Montserrat", Courier, monospace;
+  text-align: center; /* Center text horizontally */
 }
+
 .mainPage .container h1 {
   font-family: "Montserrat", Courier, monospace;
   font-weight: 600;
-  font-size: 48px;
+  font-size: 2em; /* Decrease font size for smaller screens */
   color: white;
+  margin: 4%;
 }
+
 .mainPage .container .navigation {
-  padding-top: 10px;
+  padding: 3% 2% 7% 2%;
   font-family: "Montserrat", Courier, monospace;
 }
+
 .mainPage .container .navigation button {
   color: white;
-  width: 100px;
-  height: 35px;
   font-weight: 300;
   font-size: 18px;
-  display: inline-flex;
-  align-items: center;
-  text-align: left;
-  background: transparent;
-  justify-content: center;
-  gap: 10px;
-  border: 0.5px solid;
+  padding: 2% 4%; /* Add padding to the button */
+  background-color: transparent;
+  border: 1px solid white;
   border-radius: 5px;
   cursor: pointer;
+  padding: 2%;
 }
+
 .mainPage .container .navigation button .arrow {
-  width: 15px;
-  height: auto;
+  width: 15px; /* Adjust arrow size */
 }
+
 .mainPage .container .navigation a {
-  padding-left: 20px;
   text-decoration: none;
   color: white;
   font-weight: 300;
+  padding-left: 5%;
 }
+
 .mainPage img {
-  width: 40%;
-  height: 90%;
-  padding-right: 0px;
+  max-width: 100%; /* Make image responsive */
+  height: auto;
+  max-height: 60vh; /* Limit the maximum height of the image */
+  margin-left: auto;
+  margin-right: auto;
 }/*# sourceMappingURL=MainPage.css.map */
