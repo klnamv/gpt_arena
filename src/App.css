@@ -3,9 +3,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding: 4%;
   font-family: "Montserrat", Courier, monospace;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 14px;
 }
 
