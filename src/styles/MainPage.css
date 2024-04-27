@@ -22,6 +22,7 @@
   padding-top: 10px;
   font-family: "Montserrat", Courier, monospace;
 }
+
 .mainPage .container .navigation button {
   color: white;
   width: 100px;
@@ -53,3 +54,94 @@
   height: 90%;
   padding-right: 0px;
 }/*# sourceMappingURL=MainPage.css.map */
+@media screen and (max-width: 1200px) and (min-width:300px){
+  .mainPage{
+    display: flex;
+    flex-direction: column;
+    height: 55rem;
+  }
+  .mainPage .container h1{
+    margin-left: -30%;
+    margin-top: -5%;
+  }
+  .mainPage .container .navigation{
+   
+    margin-left: -35%;
+    margin-top: -10%;
+    width:130%
+  }
+  .mainPage .container .navigation button{
+    margin-left: 15%;
+    
+  }
+  .mainPage img {
+  width: 160%;
+  height: 90%;
+ margin-left: -60%;
+ margin-top: 3%;
+ 
+}
+.mainPage .container .navigation button .arrow {
+  margin-left: -5%;
+}
+}
+@media screen and (max-width: 400px) and (min-width:390px){
+   .mainPage .container h1{
+    margin-left: -25%;
+    margin-top: -5%;
+  }
+}
+@media screen and (max-width: 370px) and (min-width:360px){
+   .mainPage .container h1{
+    margin-left: -30.5%;
+    margin-top: -5%;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width:768px){
+   .mainPage .container h1{
+    margin-left: -9%;
+    margin-top: -5%;
+  }
+   .mainPage .container .navigation button{
+    margin-left: 45%;
+    
+  }
+  .mainPage .container .navigation{
+   
+    margin-left: -25%;
+    margin-top: -5%;
+    width:130%
+  }
+}
+@media screen and (max-width: 1024px) and (min-width:540px){
+    .mainPage .container h1{
+    margin-left: -15%;
+    margin-top: -5%;
+  }
+   .mainPage .container .navigation button{
+    margin-left: 25%;
+    
+  }
+  .mainPage .container .navigation{
+   
+    margin-left: -25%;
+    margin-top: -5%;
+    width:130%
+  }
+}
+@media screen and (max-width: 1100px) and (min-width:1024px){
+   .mainPage .container h1{
+    margin-left: -9%;
+    margin-top: -5%;
+  }
+   .mainPage .container .navigation button{
+    margin-left: 40%;
+    
+  }
+  .mainPage .container .navigation{
+   
+    margin-left: -25%;
+    margin-top: -5%;
+    width:130%
+  }
+}

@@ -83,3 +83,101 @@
 .main-page .message-chat-gpt .send:hover {
   opacity: 0.8;
 }/*# sourceMappingURL=GptArena.css.map */
+
+@media screen and (max-width: 760px) and (min-width:300px){
+  .main-page{
+    height: 73rem;
+  }
+  .main-page header{
+margin-top: -5%;
+  }
+  .main-page .gpt-container {
+    display: flex;
+ 
+    flex-direction: column;
+  }
+  .main-page .gpt-container .container{
+    width: 160%;
+    margin-left: -41%;
+  }
+  .main-page .message-chat-gpt{
+   margin-left: -15.5%;
+   width: 130%;
+  }
+}
+@media screen and (max-width: 420px) and (min-width:380px){
+ .main-page{
+    height: 89rem;
+  }
+
+}
+@media screen and (max-width: 370px) and (min-width:360px){
+ .main-page{
+    height: 79rem;
+  }
+
+}
+@media screen and (max-width: 350px) and (min-width:330px){
+ .main-page{
+    height: 90rem;
+  }
+
+}
+@media screen and (max-width: 560px) and (min-width:540px){
+ .main-page{
+    height: 80rem;
+  }
+.main-page .gpt-container {
+    display: flex;
+ 
+    flex-direction: column;
+  }
+  .main-page .gpt-container .container{
+    width: 235%;
+    margin-left: -80%;
+  }
+  .main-page .message-chat-gpt{
+   
+   width: 160%;
+   margin-left: -30.5%;
+  }
+}
+@media screen and (max-width: 420px) and (min-width:412px){
+ .main-page{
+    height: 91.5rem;
+  }
+
+}
+@media screen and (max-width: 1030px) and (min-width:768px){
+ .main-page .gpt-container{
+  margin-left: -0%;
+  width:89%;
+  
+ }
+.main-page .gpt-container .container{
+    width: 150%;
+    
+  }
+   .main-page .message-chat-gpt{
+   
+   width: 190%;
+   margin-left: -50%;
+  }
+}
+@media screen and (max-width: 1030px) and (min-width:1010px){
+ 
+   .main-page .message-chat-gpt{
+   
+   width: 270%;
+   margin-left: -84%;
+  }
+}
+@media screen and (max-width: 460px) and (min-width:420px){
+ .main-page{
+    height: 100rem;
+  }
+   .main-page .gpt-container .container{
+    width: 178%;
+    margin-left: -50%;
+  }
+}
