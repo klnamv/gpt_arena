@@ -22,6 +22,7 @@
   padding-top: 10px;
   font-family: "Montserrat", Courier, monospace;
 }
+
 .mainPage .container .navigation button {
   color: white;
   width: 100px;
@@ -53,3 +54,162 @@
   height: 90%;
   padding-right: 0px;
 }/*# sourceMappingURL=MainPage.css.map */
+
+@media screen and (max-width: 1200px) and (min-width:300px){
+  .mainPage{
+    display: flex;
+    flex-direction: column;
+   
+  }
+  
+  .mainPage .container h1{
+    
+    margin-top: -8%;
+     font-size: 22px;
+     text-align: left;
+    
+  }
+   
+  .mainPage .container .navigation{
+   
+    margin-left: -35%;
+    margin-top: -6%;
+    width:130%
+  }
+  .mainPage .container .navigation button{
+    
+    margin-left: 28%;
+  }
+  .mainPage img {
+  width: 160%;
+  height: 90%;
+ margin-left: -60%;
+ margin-top: 3%;
+ 
+}
+.mainPage .container .navigation button .arrow {
+  margin-left: -5%;
+}
+}
+@media screen and (max-width: 390px) and (min-width:375px){
+   .mainPage .container h1{
+    text-align: left;
+    margin-top: -7%;
+  
+  }
+  .mainPage .container{
+    margin-left: -65%;
+   
+  }
+  .mainPage{
+    height: 35rem;
+  }
+}
+@media screen and (max-width: 412px) and (min-width:390px){
+   .mainPage .container h1{
+    text-align: left;
+    margin-top: -7%;
+     
+  }
+  .mainPage{
+    height: 46rem;
+  }
+  .mainPage .container{
+    margin-left: -50%;
+   
+  }
+}
+
+@media screen and (max-width: 430px) and (min-width:412px){
+   .mainPage .container h1{
+   text-align: left;
+    margin-top: -8%;
+    font-size: 25px;
+  }
+  .mainPage{
+    height: 50rem;
+  }
+  .mainPage .container{
+    margin-left: -50%;
+   
+  }
+  .mainPage .container .navigation button{
+    margin-left: 28%;
+    margin-top: 3%;
+  }
+}
+@media screen and (max-width: 450px) and (min-width:430px){
+   .mainPage .container h1{
+  text-align: left;
+    margin-top: -8%;
+    font-size: 25px;
+  }
+  .mainPage{
+    height: 52rem;
+  }
+  .mainPage .container{
+    margin-left: -50%;
+   
+  }
+  .mainPage .container .navigation button{
+    margin-left: 28%;
+    margin-top: 3%;
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width:768px){
+   .mainPage .container h1{
+    text-align: left;
+    margin-top: -5%;
+    font-size: 35px;
+  }
+  .mainPage .container{
+    margin-left: -50%;
+   
+  }
+ 
+   .mainPage .container .navigation button{
+    margin-left: 20%;
+    
+  }
+  .mainPage .container .navigation{
+   
+    margin-left: -25%;
+    margin-top: -5%;
+    width:130%
+  }
+}
+
+@media screen and (max-width: 1124px) and (min-width:912px){
+    .mainPage .container h1{
+    text-align: left;
+    margin-top: 0%;
+    font-size: 45px;
+  }
+  .mainPage{
+    height: 78rem;
+    
+  }
+.mainPage .container{
+    margin-left: -45%;
+   
+  }
+
+  .mainPage .container .navigation{
+   
+    margin-left: -34%;
+    margin-top: -2%;
+    width:130%
+  }
+}
+@media screen and (max-width: 1124px) and (min-width:912px){
+    
+
+  .mainPage .container .navigation{
+   
+    margin-left: -25%;
+    margin-top: -2%;
+    width:130%
+  }
+}
+

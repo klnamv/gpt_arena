@@ -59,30 +59,44 @@ const GptArena = () => {
   };
 
   return (
-    <div className='main-page'>
+    <div className="main-page">
       <header>GPT Arena</header>
-      <div className='gpt-container'>
-        <div className='container'>
+      <div className="gpt-container">
+       
+       <div className="container">
+          
           <h2>GPT 3.5 Turbo</h2>
           <div className="markdown-content">
             <ReactMarkdown>{outputGpt.model1}</ReactMarkdown>
           </div>
-        </div>
-        <div className='container'>
+  </div>
+        
+     <div className='container'>
           <h2>GPT 4</h2>
           <div className="markdown-content">
             <ReactMarkdown>{outputGpt.model2}</ReactMarkdown>
           </div>
         </div>
-    </div>
+      </div>
       <div>
-        <div className='message-chat-gpt'>
-          <input type='text' value={input} onChange={handleInputChange} onKeyDown={handleKeyPress} placeholder='Message ChatGPT...' />
-          <img src={button} onClick={handleCombinedSubmit} className='send' alt='send'/>
+        <div className="message-chat-gpt">
+          <input
+            type="text"
+            value={input}
+            onChange={handleInputChange}
+            onKeyDown={handleKeyPress}
+            placeholder="Message ChatGPT..."
+          />
+          <img
+            src={button}
+            onClick={handleCombinedSubmit}
+            className="send"
+            alt="send"
+          />
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default GptArena;
