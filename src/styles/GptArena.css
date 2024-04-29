@@ -86,34 +86,65 @@
 
 @media screen and (max-width: 760px) and (min-width:300px){
   .main-page{
-    height: 73rem;
+    height: 39rem;
   }
   .main-page header{
-margin-top: -5%;
+margin-top: 3%;
+font-size: 24px;
+
   }
   .main-page .gpt-container {
     display: flex;
- 
+margin-top: -5%;
+
     flex-direction: column;
   }
   .main-page .gpt-container .container{
     width: 160%;
-    margin-left: -41%;
+    margin-left: -40%;
+    height: 12rem;
+  
+  }
+  .main-page .gpt-container .container h2{
+    margin-top: -2%;
+  
   }
   .main-page .message-chat-gpt{
-   margin-left: -15.5%;
-   width: 130%;
+   margin-left: -10.5%;
+   width: 120%;
   }
+  .main-page .message-chat-gpt .send {
+  cursor: pointer;
+  width: 6vw;
+}
 }
 @media screen and (max-width: 420px) and (min-width:380px){
  .main-page{
     height: 89rem;
   }
-
+.main-page h1{
+  font-size: 20px;
+}
 }
 @media screen and (max-width: 370px) and (min-width:360px){
- .main-page{
-    height: 79rem;
+  .main-page{
+    height: 43rem;
+  }
+.main-page header{
+
+font-size: 28px;
+
+  }
+  .main-page .gpt-container .container{
+    width: 160%;
+    margin-left: -40%;
+    height: 12rem;
+  
+  }
+  .main-page .message-chat-gpt{
+   
+   width: 115%;
+   margin-left: -9.5%;
   }
 
 }
@@ -125,7 +156,7 @@ margin-top: -5%;
 }
 @media screen and (max-width: 560px) and (min-width:540px){
  .main-page{
-    height: 80rem;
+    height: 42rem;
   }
 .main-page .gpt-container {
     display: flex;
@@ -134,7 +165,7 @@ margin-top: -5%;
   }
   .main-page .gpt-container .container{
     width: 235%;
-    margin-left: -80%;
+    margin-left: -78%;
   }
   .main-page .message-chat-gpt{
    
@@ -142,11 +173,37 @@ margin-top: -5%;
    margin-left: -30.5%;
   }
 }
-@media screen and (max-width: 420px) and (min-width:412px){
+@media screen and (max-width: 420px) and (min-width:414px){
  .main-page{
-    height: 91.5rem;
+    height: 53rem;
   }
+.main-page header{
+margin-top: -5%;
+font-size: 28px;
 
+  }
+  .main-page .gpt-container .container{
+    width: 170%;
+    margin-left: -44%;
+    height: 18rem;
+  
+  }
+}
+@media screen and (max-width: 412px) and (min-width:390px){
+ .main-page{
+    height: 50rem;
+  }
+.main-page header{
+margin-top: -2%;
+font-size: 28px;
+
+  }
+  .main-page .gpt-container .container{
+    width: 170%;
+    margin-left: -45%;
+    height: 17rem;
+  
+  }
 }
 @media screen and (max-width: 1030px) and (min-width:768px){
  .main-page .gpt-container{
@@ -174,10 +231,50 @@ margin-top: -5%;
 }
 @media screen and (max-width: 460px) and (min-width:420px){
  .main-page{
-    height: 100rem;
+    height: 55rem;
   }
-   .main-page .gpt-container .container{
-    width: 178%;
-    margin-left: -50%;
+    .main-page .gpt-container .container{
+    width: 170%;
+    margin-left: -44%;
+    height: 18rem;
+  
   }
+}
+@media screen and (max-width: 414px) and (min-width:412px){
+ .main-page{
+    height: 53rem;
+  }
+.main-page header{
+margin-top: -5%;
+font-size: 28px;
+
+  }
+  .main-page .gpt-container .container{
+    width: 170%;
+    margin-left: -44%;
+    height: 18rem;
+  
+  }
+}
+@media screen and (max-width: 360px) and (min-width:340px){
+   .mainPage .container h1{
+    margin-left: -38%;
+    margin-top: -8%;
+    font-size: 20px;
+  }
+  .mainPage{
+    height: 10rem;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width:912px){
+   .main-page .message-chat-gpt{
+   
+   width: 275%;
+   margin-left: -88%;
+  }
+.main-page .message-chat-gpt .send {
+  cursor: pointer;
+  width: 4vw;
+}
+  
 }
