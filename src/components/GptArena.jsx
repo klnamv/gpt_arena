@@ -10,7 +10,7 @@ const modelMapping = {
   huggingFaceModel: {
     name: "Hugging Face Model",
     endpoint: "https://api-inference.huggingface.co/models/microsoft/Phi-3-mini-4k-instruct",
-    authorizationToken: "Bearer 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"
+    authorizationToken: "Bearer {Api token} "
   }
 };
 
