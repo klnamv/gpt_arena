@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Main page styling */
 .main-page {
   display: flex;
   flex-direction: column;
@@ -7,19 +9,124 @@
   background: linear-gradient(#E43F6F, #FFCF56);
   height: 93vh;
 }
+
 .main-page header {
-  font-family: "Montserrat", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 2.5rem;
   color: white;
   margin-bottom: 2rem;
 }
-.main-page .gpt-container {
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  margin-bottom: 1rem;
+}
+
+.dropdown-menu select {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 2px solid #E43F6F;
+  border-radius: 5px;
+  background-color: white;
+  color: #E43F6F;
+  outline: none;
+}
+
+/* Toggle switch styling */
+.toggle {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.toggle label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.toggle input[type="checkbox"] {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background-color: #E43F6F;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.toggle input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: white;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.toggle input[type="checkbox"]:checked::before {
+  transform: translateX(20px);
+}
+
+/* Button styling */
+.button {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #E43F6F;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #FFCF56;
+}
+
+/* Chat input styling */
+.message-chat-gpt {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding-right: 6px;
+}
+
+.message-chat-gpt input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 1rem;
+  background: transparent;
+  color: white;
+}
+
+.message-chat-gpt input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.message-chat-gpt .send {
+  margin-left: 10px;
+}
+/* Output container styling */
+.gpt-container {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
-.main-page .gpt-container .container {
+
+.gpt-container .container {
   width: 30vw;
   height: 65vh;
   background: white;
@@ -29,15 +136,17 @@
   flex-direction: column;
   align-items: center;
 }
-.main-page .gpt-container h2 {
+
+.gpt-container h2 {
   margin-bottom: 10px;
-  font-family: "Montserrat", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 20px;
   color: #E43F6F;
 }
-.main-page .gpt-container .markdown-content {
-  font-family: "Montserrat", Courier, monospace;
+
+.gpt-container .markdown-content {
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   text-align: start;
   padding: 5px 20px;
@@ -47,39 +156,12 @@
   height: 100%;
   width: 100%;
 }
-.main-page .gpt-container .markdown-content code {
+
+.gpt-container .markdown-content code {
   font-size: small;
   color: #E43F6F;
   background: #D9D9D9;
 }
-.main-page .message-chat-gpt {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  border: 1px solid black;
-  width: 45vw;
-  height: 5vh;
-  border-radius: 10px;
-  padding-right: 6px;
+.footer {
+  background: linear-gradient(#E43F6F, #FFCF56);
 }
-.main-page .message-chat-gpt input {
-  flex-grow: 1;
-  border: none;
-  outline: none;
-  padding: 20px;
-  font-size: 16px;
-  background: transparent;
-}
-.main-page .message-chat-gpt input::-moz-placeholder {
-  color: rgba(0, 0, 0, 0.5);
-}
-.main-page .message-chat-gpt input::placeholder {
-  color: rgba(0, 0, 0, 0.5);
-}
-.main-page .message-chat-gpt .send {
-  cursor: pointer;
-  width: 2vw;
-}
-.main-page .message-chat-gpt .send:hover {
-  opacity: 0.8;
-}/*# sourceMappingURL=GptArena.css.map */
