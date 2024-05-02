@@ -64,7 +64,7 @@ const GptArena = () => {
       <header>GPT Arena</header>
       <div className='gpt-container'>
         <div className='container'>
-          <h2>GPT 3.5 Turbo</h2>
+          <Dropdown />
           <div className="markdown-content">
             <ReactMarkdown>{outputGpt.model1}</ReactMarkdown>
           </div>
