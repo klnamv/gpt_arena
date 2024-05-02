@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import OpenAI from "openai";
+import Dropdown from './Dropdown'; 
 import '../styles/GptArena.css';
 
 import button from '../assets/button.svg';
