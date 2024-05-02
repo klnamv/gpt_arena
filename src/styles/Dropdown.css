@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 16px;
+    font-size: 18px;
     font-family:"Montserrat", Courier, monospace;
     font-weight: 600;
     background: white;
@@ -41,11 +41,21 @@
     width: 100%;
     margin-top: 1px;
   }
-  
+  .dropdown-content.active {
+    display: block; /* Shown when the 'active' class is added */
+  }
  .dropdown-content li{
     list-style: none;
     margin-left: 0px;
  }
+ .icon {
+  transition: transform 0.3s ease-in-out;  /* Add transition for smooth rotation */
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
   
   .dropdown-content a:hover{
     background-color: #f7c3d2;
