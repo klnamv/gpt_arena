@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import OpenAI from "openai";
+import Dropdown from './Dropdown'; 
 import '../styles/GptArena.css';
 
 import button from '../assets/button.svg';
@@ -63,13 +64,13 @@ const GptArena = () => {
       <header>GPT Arena</header>
       <div className='gpt-container'>
         <div className='container'>
-          <h2>GPT 3.5 Turbo</h2>
+          <Dropdown />
           <div className="markdown-content">
             <ReactMarkdown>{outputGpt.model1}</ReactMarkdown>
           </div>
         </div>
         <div className='container'>
-          <h2>GPT 4</h2>
+          <Dropdown />
           <div className="markdown-content">
             <ReactMarkdown>{outputGpt.model2}</ReactMarkdown>
           </div>
@@ -86,3 +87,4 @@ const GptArena = () => {
 }
 
 export default GptArena;
+

@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+    .dropdown {
+    position: relative; /* Required for absolute positioning of dropdown content */
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    color: #E43F6F;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-family:"Montserrat", Courier, monospace;
+    font-weight: 600;
+    background: white;
+    padding: 5px 20px;
+    cursor: pointer; 
+    border: 1px solid #E43F6F;
+    border-radius: 8px;
+}
+  .dropbtn>svg{
+    fill: #E43F6F;
+  }
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+    unicode-bidi: isolate;
+}
+  
+  .dropdown-content {
+    display: none; /* Hide by default */
+    position: absolute;
+    border: 1px solid #E43F6F;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 1px;
+  }
+  .dropdown-content.active {
+    display: block; /* Shown when the 'active' class is added */
+  }
+ .dropdown-content li{
+    list-style: none;
+    margin-left: 0px;
+ }
+ .icon {
+  transition: transform 0.3s ease-in-out;  /* Add transition for smooth rotation */
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+  
+  .dropdown-content a:hover{
+    background-color: #f7c3d2;
+  }
+  .dropdown::content li:hover{
+    background-color: #f7c3d2;
+  }
+  .dropdown-content a {
+    display: block;
+    color: #E43F6F;
+    background-color: white;
+    padding: 10px 16px;
+    font-family:"Montserrat", Courier, monospace;
+    font-weight: 600;
+    text-align: center;
+    border: 2px #E43F6F;
+    border-radius: 8px;
+    padding-left: 1px;
+    text-decoration: none;
+   
+  }
+ 
+  
