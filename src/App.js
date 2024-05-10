@@ -19,8 +19,8 @@ function App() {
         <GptArena />
       )}
       <footer>
-      <a href='https://github.com/klnamv'>
-        Made with love by @klnamv ✨
+      <a href='https://github.com/Ravindra2711'>
+        Made randomly by @ravi ✨
       </a>
       </footer>
     </div>

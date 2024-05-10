@@ -70,7 +70,7 @@ const GptArena = () => {
           </div>
         </div>
         <div className='container'>
-          <h2>GPT 4</h2>
+          <Dropdown />
           <div className="markdown-content">
             <ReactMarkdown>{outputGpt.model2}</ReactMarkdown>
           </div>
@@ -87,3 +87,4 @@ const GptArena = () => {
 }
 
 export default GptArena;
+
