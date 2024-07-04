@@ -22,6 +22,7 @@
   padding-top: 10px;
   font-family: "Montserrat", Courier, monospace;
 }
+
 .mainPage .container .navigation button {
   color: white;
   width: 100px;
@@ -53,3 +54,429 @@
   height: 90%;
   padding-right: 0px;
 }/*# sourceMappingURL=MainPage.css.map */
+@media screen and (max-width:375px) and (min-width:360px){
+ .mainPage{
+    display: flex;
+    flex-direction: column;
+   height: 60rem;
+  }
+}
+
+@media screen and (max-width: 390px) and (min-width:375px){
+   .mainPage .container h1{
+    text-align: left;
+    margin-top: -7%;
+  
+  }
+  .mainPage{
+    display: flex;
+    flex-direction: column;
+   
+  }
+  
+  .mainPage .container h1{
+    
+    margin-top: -8%;
+     font-size: 22px;
+     text-align: left;
+    
+  }
+   
+  .mainPage .container .navigation{
+   
+    margin-left: -35%;
+    margin-top: -6%;
+    width:130%
+  }
+  .mainPage .container .navigation button{
+    
+    margin-left: 28%;
+  }
+  
+.mainPage .container .navigation button .arrow {
+  margin-left: -5%;
+}
+
+
+  .mainPage img {
+  width: 150%;
+  height: 90%;
+ margin-left: -50%;
+ margin-top: 3%;
+ 
+}
+  .mainPage .container{
+    margin-left: -65%;
+   
+  }
+  .mainPage{
+    height: 35rem;
+  }
+}
+@media screen and (max-width: 411px) and (min-width:390px){
+  .mainPage{
+    display: flex;
+    flex-direction: column;
+   
+  }
+  
+  .mainPage .container h1{
+    
+    margin-top: -8%;
+     font-size: 22px;
+     text-align: left;
+    margin-left: -5%;
+  }
+   
+  .mainPage .container .navigation{
+   
+    margin-left: -40%;
+    margin-top: -6%;
+    width:130%
+  }
+  .mainPage .container .navigation button{
+    
+    margin-left: 28%;
+  }
+  
+.mainPage .container .navigation button .arrow {
+  margin-left: -5%;
+}
+
+   .mainPage .container h1{
+    text-align: left;
+    margin-top: -7%;
+     
+  }
+  .mainPage{
+    height: 46rem;
+  }
+  .mainPage .container{
+    margin-left: -50%;
+   
+  }
+  .mainPage img {
+  width: 150%;
+  height: 96%;
+ margin-left: -50%;
+ margin-top: 3%;
+ 
+}
+}
+@media screen and (max-width: 430px) and (min-width:414px){
+   .mainPage .container h1{
+   text-align: left;
+    margin-top: -8%;
+    font-size: 25px;
+    margin-left: 0%;
+  }
+  .mainPage{
+    height:50rem;
+  }
+  .mainPage .container{
+    margin-left: -50%;
+   
+  }
+  .mainPage .container .navigation button{
+    margin-left: 28%;
+    margin-top: 3%;
+    padding-left: 0%;
+  }
+  .mainPage img {
+  position: absolute;
+width:100%;
+height:82%;
+left: 0%;
+top:13%;
+}
+ .mainPage{
+    display: flex;
+    flex-direction: column;
+   
+  }
+  
+   
+  .mainPage .container .navigation{
+   
+    margin-left: -35%;
+    margin-top: -6%;
+    width:130%
+  }
+  
+  .mainPage .container .navigation button img{
+    margin-left: 24%;
+    display: block;
+    margin-top: -8%;
+
+  }
+
+
+}
+@media screen and (max-width: 414px) and (min-width:412px){
+   .mainPage .container h1{
+   text-align: left;
+    margin-top: -8%;
+    font-size: 25px;
+    margin-left: 0%;
+  }
+  .mainPage{
+    height:50rem;
+  }
+  .mainPage .container{
+    margin-left: -50%;
+   
+  }
+  .mainPage .container .navigation button{
+    margin-left: 28%;
+    margin-top: 3%;
+    padding-left: 0%;
+  }
+  .mainPage img {
+  position: absolute;
+width:100%;
+height:80%;
+left: 0%;
+top:13%;
+}
+ .mainPage{
+    display: flex;
+    flex-direction: column;
+   
+  }
+  
+   
+  .mainPage .container .navigation{
+   
+    margin-left: -35%;
+    margin-top: -6%;
+    width:130%
+  }
+  
+  .mainPage .container .navigation button img{
+    margin-left: 24%;
+    display: block;
+    margin-top: -9%;
+
+  }
+
+
+}
+
+
+
+@media screen and (max-width: 819px) and (min-width:768px){
+   .mainPage{
+    display: flex;
+     flex-direction: column;
+     position: absolute;
+    width:84.2%
+   }
+   .mainPage .container{
+    margin-left: -22%;
+    margin-top: -6%;
+   }
+   .mainPage img{
+   position: absolute;
+   top:19%;
+   left:0%;
+   width:100%;
+   height: 81%;
+   }
+    .mainPage .container .navigation{
+      margin-top: -3%;
+      margin-left: 1%;
+    }
+    .mainPage .container .navigation button{
+      padding-left: 0%;
+    }
+    .mainPage .container .navigation button img{
+      position: absolute;
+      top:14%;
+      left:16%
+    }
+
+}
+@media screen and (max-width: 1000px) and (min-width:820px){
+   .mainPage .container h1{
+    margin-left: -39%;
+    margin-top: -3%;
+    font-size: 35px;
+  }
+  .mainPage{
+    height:67rem;
+   
+     display: flex;
+    flex-direction: column;
+    
+  }
+ 
+   .mainPage .container .navigation button{
+    margin-left: -10%;
+    
+  }
+  .mainPage .container .navigation{
+   
+    margin-left: -25%;
+    margin-top: -5%;
+    width:130%
+  }
+   .mainPage img {
+  position:absolute;
+  left:0%;
+  top:12%;
+  width:100%;
+  height: 83%;
+  
+}
+.mainPage .container .navigation button .arrow {
+  margin-left: 15%;
+  margin-top: -5.2%;
+}
+
+}
+@media screen and (max-width: 1100px) and (min-width:1024px){
+   .mainPage .container h1{
+    margin-left: -35%;
+    margin-top: -2%;
+    font-size: 40px;
+  }
+  .mainPage{
+    height: 4rem;
+     
+  }
+   .mainPage{
+    height: 79rem;
+     display: flex;
+    flex-direction: column;
+  }
+   .mainPage .container .navigation button{
+    margin-left: 40%;
+    
+  }
+  .mainPage .container .navigation{
+   font-size: 30px;
+    margin-left: -95%;
+    margin-top: -5%;
+    width:130%
+  }
+ .mainPage img{
+  position: absolute;
+ }
+ .mainPage .container .navigation button .arrow {
+  margin-left: -5%;
+}
+}
+@media screen and (max-width: 1024px) and (min-width:912px){
+   .mainPage .container h1{
+    margin-left: -35%;
+    margin-top: -2%;
+    font-size: 40px;
+  }
+  .mainPage{
+    height: 4rem;
+     
+  }
+   .mainPage{
+    height: 79rem;
+     display: flex;
+    flex-direction: column;
+  }
+   .mainPage .container .navigation button{
+    margin-left: 40%;
+    
+  }
+  .mainPage .container .navigation{
+   font-size: 30px;
+    margin-left: -86%;
+    margin-top: -5%;
+    width:130%
+  }
+ .mainPage img{
+  width:115.1%;
+  margin-left: -15%;
+ }
+ .mainPage .container .navigation button .arrow {
+  margin-left: -5%;
+}
+
+}
+@media screen and (max-width: 540px) and (min-width:430px){
+
+  .mainPage{
+    height:52rem;
+       display: flex;
+    flex-direction: column;
+  }
+  .mainPage .container h1{
+   margin-left: -30%;
+    margin-top: -5%;
+    font-size: 40px;
+  }
+   
+.mainPage .container .navigation button .arrow {
+  margin-left: 24%;
+  margin-top: -9%;
+  display: block;
+}
+   .mainPage .container .navigation{
+    margin-left: -30%;
+    margin-top: -5%;
+    width:130%
+  }
+  .mainPage img{
+   position: absolute;
+   height:73%;
+   left:0%;
+   width:100%;
+   top:22%;
+   
+  }
+}
+@media screen and (max-width: 660px) and (min-width:540px){
+    .mainPage .container h1{
+    margin-left: -60%;
+    margin-top: -7%;
+     font-size: 20px;
+  }
+   
+.mainPage .container .navigation button .arrow {
+  margin-left: -5%;
+}
+  .mainPage{
+    height: 39rem;
+  width:77.7%;
+       display: flex;
+    flex-direction: column;
+  }
+   .mainPage .container .navigation{
+   
+    margin-left: -60%;
+    margin-top: -5%;
+    width:130%
+  }
+  .mainPage img{
+    width:128.5%;
+    margin-left: -29%;
+    margin-top: -4%;
+
+  }
+}
+
+@media screen and (max-width: 359px) and (min-width:344px){
+   .mainPage h1{
+    font-size: 20px;
+   }
+  .mainPage{
+    
+       display: flex;
+    flex-direction: column;
+  }
+   .mainPage .container .navigation{
+   
+    
+  }
+  .mainPage img{
+    
+
+  }
+}

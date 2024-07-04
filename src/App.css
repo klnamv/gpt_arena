@@ -7,9 +7,33 @@ footer {
   font-family: "Montserrat", Courier, monospace;
   font-weight: 300;
   font-size: 14px;
+  
 }
 
 footer a {
   text-decoration: none;
   color: black;
 }/*# sourceMappingURL=App.css.map */
+
+@media screen and (max-width: 390px) and (min-width:375px){
+  footer{
+
+ margin-top: -2%;
+ }  
+}
+@media screen and (max-width: 430px) and (min-width:412px){
+  footer{
+font-size: 16px;
+ margin-top: -1%;
+ }  
+}
+@media screen and (max-width: 819px) and (min-width:768px){
+  footer{
+    position: absolute;
+    top:92.5%;
+    left:25%;
+    font-size: 22px;
+    
+  }
+
+}
